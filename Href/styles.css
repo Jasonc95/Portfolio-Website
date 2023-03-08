@@ -1,0 +1,18 @@
+
+body {
+    background-color: rgb(16, 23, 23);
+    color: rgb(190, 178, 178);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.logos {
+    display: flex;
+}
