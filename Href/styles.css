@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
 
+/*Color Scheme _ Monochromatic
+#0d3740 - dark
+#1e8095 - Med
+#30c9ea - Light
+*/
+
 :root {
     background-color: rgb(20, 20, 20);
 }
@@ -44,7 +50,7 @@ section {
     width: auto;
     justify-content: space-between;
     display: flex;
-    background-color: rgb(5, 23, 31);
+    background-color: #0d3740;
 }
 /*----NAME  top left*/
 .name {
@@ -57,7 +63,7 @@ section {
     margin-top: 0.2em;
 }
 .cap {
-    color: rgb(15, 91, 104);
+    color: #1e8095;
     font-weight: 600;
 }
 /*----NAV ITEMS  top right*/
@@ -77,29 +83,37 @@ section {
     border-radius: .3em;  
 }
 .nav-bar a:hover {
-    background-color: rgb(15, 91, 104);
+    background-color: #1e8095;
     color: white;
     font-weight: 300;
-    transition: .5s;
-    transition-duration: .5s;
     margin: 0px 13px 0px 13px;
-   
+    transition: .5s;
+    transition-duration: .5s; 
 }
 
 
 
 /*CONTENT TEXT*/
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 h2 {
     font-size: 2.5em;
 }
-p{
+p {
     font-size: 1.1em;
     line-height: 1.4;
     padding: 15px 15% 70px 15%;
     text-align: center;
+}
+a {
+    color: #1e8095;
+    font-weight: 800;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #30c9ea;
 }
 
 /* LOGOS*/
@@ -107,6 +121,10 @@ p{
     display: flex;    
 }
 .logos img {
-    height: 50px;
-    width: 50px;  
+    height: 70px;
+    width: 70px;  
+}
+.logos-link img {
+    height: 70px;
+    width: 70px; 
 }
