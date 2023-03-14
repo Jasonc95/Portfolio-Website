@@ -7,28 +7,29 @@
     <title>JasonC's Portfolio Page</title>
     <link rel="stylesheet"
     type="text/css" href="Href/styles.css">
+    <script defer src="Href/app.js"></script>
 </head>
 <body>
     <div>
         <nav class="nav-bar">
-            <h4 class="name"><span class="cap">J</span>ason<span> <span class="cap">C</span>lough</span></h4>                     
+            <h4 class="name"><span class="cap">J</span>ason<span> <span class="cap">C</span>lough</span>
+            <span id="ClockDisplay" class="clock" onload="showTime()"></span></h4>                  
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About-Me">About Me</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>  
             </ul>
         </nav>
     </div>
 
     <section>
-        <h1 id="Home">Welcome to my Portfolio</h1>
+        <h1 id="home">Welcome to my Portfolio</h1>
     </section>
 
-    <section>
-        <h2 id="About-Me">About Me</h2> 
+    <section class="hidden">
+        <h2 id="about" class="center-content">About Me</h2> 
         <p>Hello there, I'm Jason Clough, a beginner front-end developer from England with big dreams of one day becoming the best developer I can be. I'm also a huge fan of traveling and exploring new places, meeting new people, and immersing myself in diverse cultures. and just living my best life. Some of my hobbies involve.<br><br><br>
             
              <b>- staying active and healthy -</b><br>
@@ -43,44 +44,48 @@
              </p>
     </section>
     
-    <section>
-        <H2 id="Skills">Skills</H2>
+    <section class="hidden">
+        <H2 id="skills" class="center-content">Skills</H2>
         <div class="logos">
-            <div>
+            <div class="logo hidden">
                 <img  src="./Images/HTML.png" alt="HTML">
             </div>
-            <div>
+            <div class="logo hidden">
                 <img src="./Images/CSS.png" alt="CSS">
             </div>
-            <div>
+            <div class="logo hidden">
                 <img src="./Images/JS.png" alt="JavaScript">
             </div>
-            <div>
+            <div class="logo hidden">
                 <img src="./Images/PYTHON.png" alt="Python">
             </div>
-            <div>
+            <div class="logo hidden">
                 <img src="./Images/GIT.png" alt="Git">
             </div>
-            <div>
+            <div class="logo hidden">
                 <img src="./Images/GITHUB.png" alt="GitHub">
             </div>
         </div>
     </section>
 
-    <section>
-        <h2 id="Projects">Projects</h2>
+    <section class="hidden">
+        <h2 id="projects" class="center-content">Projects</h2>
         <p>This section is a work in progress, as I'm currently pouring my heart and soul into developing my portfolio website and other exciting personal projects. Stay tuned for updates - I promise they'll be worth the wait!
         </p>
     </section>
 
-    <section>
-        <h2 id="Contact">Contact</h2>
+    <section class="hidden">
+        <h2 id="contact" class="center-content">Contact</h2>
         <p class="Contact-info">Email me at:<br> <a href="mailto:Jasonclough95@gmail.com" target="_blank"> Jasonclough95@gmail.com</a><br><br>
-        You can also find me at:<br><br>
-        <span class="logos-link">
-            <a href="https://github.com/Jasonc95" target="_blank"><img src="/Images/GITHUB.png"></a>&nbsp
-            <a href="https://www.linkedin.com/in/jason-clough-b7078b269/" target="_blank"><img src="/Images/Link.png" alt=""></a>
-        </span>
+        You can also find me at:
+        <div class="logos">
+            <div class="logo-link hidden">
+                <a href="https://github.com/Jasonc95" target="_blank"><img src="/Images/GITHUB.png"></a>&nbsp
+            </div>
+            <div class="logo-link hidden">    
+                <a href="https://www.linkedin.com/in/jason-clough-b7078b269/" target="_blank"><img src="/Images/Link.png" alt=""></a>
+            </div>
+        </div>
         </p>
     </section>
 

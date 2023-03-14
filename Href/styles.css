@@ -13,6 +13,7 @@
 * {
     scroll-behavior: smooth;
     font-family: Quicksand, Verdana, Geneva, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,15 +21,16 @@ body {
     color: rgb(190, 190, 200); 
     height: 100vh;
     padding: 0px;
-    margin: 0px;
-   
+    margin: 0px;   
 }
 
 section {
     display: grid;
     place-items: center;
     align-content: center;
+    min-height: 100vh;
 }
+
 
 
 /* SCROLL BAR */
@@ -44,16 +46,16 @@ section {
 }
 
 
-/* Navigation Bar */
+/* NAVIGATION BAR */
 .nav-bar {
     height: 3.5em;
-    width: auto;
+    width: 100%;
     justify-content: space-between;
     display: flex;
     background-color: #0d3740;
 }
 /*----NAME  top left*/
-.name {
+.nav-bar .name {
     color: rgb(190, 190, 200);
     font-size: 2em;
     font-weight: 300;
@@ -62,7 +64,7 @@ section {
     padding-top: 0em;
     margin-top: 0.2em;
 }
-.cap {
+.nav-bar .cap {
     color: #1e8095;
     font-weight: 600;
 }
@@ -80,7 +82,7 @@ section {
     font-size: large;
     font-weight: 600;
     padding: 2px 4px;
-    border-radius: .3em;  
+    border-radius: .3em; 
 }
 .nav-bar a:hover {
     background-color: #1e8095;
@@ -92,7 +94,6 @@ section {
 }
 
 
-
 /*CONTENT TEXT*/
 h1 {
     font-size: 3em;
@@ -101,9 +102,9 @@ h2 {
     font-size: 2.5em;
 }
 p {
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1.4;
-    padding: 15px 15% 70px 15%;
+    padding: 0px 15%;
     text-align: center;
 }
 a {
@@ -120,6 +121,22 @@ a:hover {
 .logos {
     display: flex;    
 }
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+.logo:nth-child(5) {
+    transition-delay: 800ms;
+}
+.logo:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
 .logos img {
     height: 70px;
     width: 70px;  
@@ -128,3 +145,38 @@ a:hover {
     height: 70px;
     width: 70px; 
 }
+.logo-link:nth-child(2) {
+    transition-delay: 200ms;
+}
+.logo-link:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+
+/*JAVASCRIPT RESPONSIVENESS*/
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter:brightness(1)
+}
+.show {
+    opacity: 1;
+    transition: all 3s;
+    filter: brightness();
+}
+
+.center-content {
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /*CLOCK*/
+  .nav-bar .clock {
+    color: #1e8095;
+    font-size: .7em;
+    font-weight: 300;
+    margin-left: .75em;
+    display: inline-flex;
+  }
