@@ -48,10 +48,11 @@ section {
 
 /* NAVIGATION BAR */
 .nav-bar {
-    height: 3.5em;
-    width: 100%;
+    height: 3.6em;
+
     justify-content: space-between;
     display: flex;
+    flex: content;
     background-color: #0d3740;
 }
 /*----NAME  top left*/
@@ -61,8 +62,7 @@ section {
     font-weight: 300;
     align-items: center;
     padding-left: 4%;
-    padding-top: 0em;
-    margin-top: 0.2em;
+    margin-top: 0.2rem;
 }
 .nav-bar .cap {
     color: #1e8095;
@@ -71,7 +71,7 @@ section {
 /*----NAV ITEMS  top right*/
 .nav-bar ul {
     list-style-type: none;
-    display: flex;
+    display: inline-flex;
     padding-right: 4%;
     gap:2em;
     margin-top: 1em;
@@ -96,7 +96,7 @@ section {
 
 /*CONTENT TEXT*/
 h1 {
-    font-size: 3em;
+    font-size: 3rem;
 }
 h2 {
     font-size: 2.5em;
@@ -116,6 +116,7 @@ a:hover {
     text-decoration: underline;
     color: #30c9ea;
 }
+
 
 /* LOGOS*/
 .logos {
@@ -141,16 +142,6 @@ a:hover {
     height: 70px;
     width: 70px;  
 }
-.logos-link img {
-    height: 70px;
-    width: 70px; 
-}
-.logo-link:nth-child(2) {
-    transition-delay: 200ms;
-}
-.logo-link:nth-child(3) {
-    transition-delay: 400ms;
-}
 
 
 /*JAVASCRIPT RESPONSIVENESS*/
@@ -172,7 +163,8 @@ a:hover {
     align-items: center;
 }
 
-  /*CLOCK*/
+
+/*CLOCK*/
   .nav-bar .clock {
     color: #1e8095;
     font-size: .7em;
@@ -180,3 +172,76 @@ a:hover {
     margin-left: .75em;
     display: inline-flex;
   }
+
+
+/* For mobile devices */
+@media screen and (max-width: 767px) {
+    section {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }  
+    h2 {
+      font-size: 1.8rem;
+    } 
+    p {
+      font-size: 1.2rem;
+      padding: 0;
+      text-align: center;
+    }  
+    .logos img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+/* Responsive Navigation Bar */
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .nav-bar .name {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav-bar ul {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .nav-bar ul a {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    .nav-bar ul a:hover {
+        text-decoration: underline;
+        color: #30c9ea;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar {
+      flex-direction: column;
+      height: auto;
+    }
+    .nav-bar .name {
+      margin-bottom: 1em;
+    }
+    .nav-bar ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+    }
+    .nav-bar ul a {
+      margin-top: 1em;
+    }
+  }
+  
