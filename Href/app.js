@@ -19,18 +19,26 @@ hiddenSections.forEach((section) => observer.observe(section));
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.hash);
-    const targetPosition = target.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const targetHeight = target.offsetHeight;
-    const offset = targetPosition - (windowHeight - targetHeight) / 4;
-    window.scrollTo({
-      top: offset,
-      behavior: 'smooth'
+  if (link.hash === '#about') {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.hash);
+      target.scrollIntoView({ behavior: 'smooth' });
     });
-  });
+  } else {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.hash);
+      const targetPosition = target.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const targetHeight = target.offsetHeight;
+      const offset = targetPosition - (windowHeight - targetHeight) / 2.3;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
 
 
