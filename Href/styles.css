@@ -104,9 +104,13 @@ h2 {
 h3 {
     text-align: center;
 }
+.project-align h3 {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
 p {
     font-size: 1.3em;
-    line-height: 1.4;
+    line-height: 1.45;
     padding: 0px 15%;
     text-align: center;
 }
@@ -202,13 +206,28 @@ a:hover {
   }
 
 
+/*PROJECTS*/
+.project-align {
+    display: flex;
+}
+.project-align > div {
+    margin: 1.5rem; 
+}
 /*ROCK PAPER SCISSORS*/
 div #rps {
     text-align: center;
+    background-color: #f9f9f90e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
 }
 div #rps img {
     display: inline-flex;
-    justify-content: space-around
+    justify-content: space-around;
+    height: auto;
+    width: 70px;
+    margin-bottom: 10px;
 }
 #startGame {
     width: 7rem;
@@ -217,49 +236,113 @@ div #rps img {
     font-size: 0.9rem;
     font-weight: 800;
     border-radius: 0.3em;
+    margin-bottom: 5px;
 }
 #startGame:hover {
    background-color: #30c9ea; 
 }
 #userChoiceInput {
+    text-align: center;
     background-color: #d0cccc;
     border-radius: 0.3em;
     height: 2rem;
     width: 10rem;
     font-weight: 800;
 }
+#result {
+    padding-top: 5px;
+}
+
+
+/*TIC TAC TOE*/
+div #ttt {
+    text-align: center;
+    background-color: #f9f9f90e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}  
+#board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}  
+.square {
+    background-color: #30c9ea;
+    border: 1px solid #333;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    font-size: 3em;
+    color: black;
+    font-weight: 800;
+}  
+.square:nth-child(even) {
+    background-color: #1e8095;
+}
+.square:hover {
+    background-color: #d0cccc;
+} 
+#status {
+    margin-top: 10px;
+    font-size: 20px;
+}
 
 
 /* For mobile devices */
 @media screen and (max-width: 767px) {
     section {
-      grid-template-columns: 1fr;
-      padding: 1rem;
-    }
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-    }  
-    h2 {
-      font-size: 1.8rem;
-    } 
-    h3 {
-      font-size: 0.6rem;
-      align-items: center;
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
     p {
-      font-size: 1.2rem;
-      padding: 0;
-      text-align: center;
+        font-size: 1.2rem;
+        padding: 0;
+        text-align: center;
     }  
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }  
+    h2 {
+        font-size: 1.8rem;
+    } 
+    h3 {
+        font-size: 1.6rem;
+    }
+    .logos h3 {
+        font-size: 0.6rem;
+        align-items: center;
+    }
     .logos img {
-      height: 50px;
-      width: 50px;
+        height: 50px;
+        width: 50px;
     }
     #rps img {
         margin: auto;
         height: 50px;
         width: 50px;
+    }
+    .project-align {
+        text-align: center;
+        flex-direction: column;
+    }
+    #rps, #ttt {
+        width: 100%;
+        height: auto;
+      }
+    #board {
+        height: 180px;
+        width: 180px;
+    }
+    .square {
+        height: 60px;
+        width: 60px;
     }
   }
 

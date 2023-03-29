@@ -19,7 +19,7 @@ hiddenSections.forEach((section) => observer.observe(section));
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
-  if (link.hash === '#about') {
+  if (link.hash === '#about' || link.hash === '#projects') {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const target = document.querySelector(link.hash);
