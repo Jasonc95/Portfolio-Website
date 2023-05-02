@@ -70,3 +70,17 @@ function showTime(){
 }
 
 showTime();
+
+
+/*Drop Down SubSections*/
+const ddBtn = document.querySelectorAll('.ddBtn');
+
+ddBtn.forEach(button => {
+  const subTitle = button.parentNode;
+  const paragraph = subTitle.querySelector('.toggleParagraph');
+  button.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !isExpanded);
+    paragraph.classList.toggle('show');
+  });
+});

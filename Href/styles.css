@@ -123,6 +123,12 @@ a:hover {
     text-decoration: underline;
     color: #30c9ea;
 }
+div {
+    text-align: center;
+}
+b {
+    font-size: 1.3em;
+}
 
 
 /* LOGOS*/
@@ -194,6 +200,39 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+.toggleParagraph {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.3s ease, height 1s;
+    margin-bottom: 20px; 
+    overflow: hidden;
+}
+.toggleParagraph.show {
+    opacity: 1;
+    height: auto;
+}
+.dd {
+    width: 30%;
+}
+.ddBtn {
+    color: rgb(210, 220, 230);
+    background-color: #303030;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+.ddBtn:hover {
+    color: #30c9ea;
+    background-color: #454a4d;
+    border-radius: 10px;
+}
+.dd-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
 
 
 /*CLOCK*/
@@ -311,6 +350,7 @@ div #ttt {
     }  
     h2 {
         font-size: 1.8rem;
+        text-align: center;
     } 
     h3 {
         font-size: 1.6rem;
@@ -343,6 +383,15 @@ div #ttt {
     .square {
         height: 60px;
         width: 60px;
+    }
+    .dd-container {
+        display: block;
+        text-align: center;
+        align-content: center;
+    }
+    .dd {
+        text-align: center;
+        margin: auto;
     }
   }
 
