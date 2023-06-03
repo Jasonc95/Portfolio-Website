@@ -1,37 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
 
 /*Color Scheme _ Monochromatic
-#0d3740 - dark
-#1e8095 - Med
-#30c9ea - Light
+                                #0d3740 - dark
+                                #1e8095 - Med
+                                #30c9ea - Light
 */
-
-:root {
-    background-color: rgb(20, 20, 20);
-}
-
-* {
-    scroll-behavior: smooth;
-    font-family: Quicksand, Verdana, Geneva, sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(background-color);
-    color: rgb(210, 220, 230); 
-    height: 100vh;
-    padding: 0px;
-    margin: 0px;   
-}
-
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-}
-
-
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
@@ -45,17 +18,50 @@ section {
     background-color: #454a4d;
 }
 
+:root {
+    --primary-color:#141414;
+    --secondary-color:#d2dce6;
+    --project-box:#262626;
+    --dd-text:#d2dce6;
+}        
+
+.lightDark{
+    --primary-color:#bcbcbc;
+    --secondary-color:black;
+    --project-box:#a9a9a9;
+    --dd-text:black;
+}  
+
+* {   
+    scroll-behavior: smooth;
+    font-family: Quicksand, Verdana, Geneva, sans-serif;
+    box-sizing: border-box;
+}        
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color); 
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;   
+}    
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}    
 
 /* NAVIGATION BAR */
 .nav-bar {
     height: 3.6em;
-
     justify-content: space-between;
     display: flex;
     flex: content;
     background-color: #0d3740;
 }
-/*----NAME  top left*/
+/*----NAME  TOP LEFT*/
 .nav-bar .name {
     color: rgb(190, 190, 200);
     font-size: 2.4em;
@@ -68,7 +74,7 @@ section {
     color: #1e8095;
     font-weight: 600;
 }
-/*----NAV ITEMS  top right*/
+/*----NAV ITEMS  TOP RIGHT*/
 .nav-bar ul {
     list-style-type: none;
     display: inline-flex;
@@ -86,13 +92,21 @@ section {
 }
 .nav-bar a:hover {
     background-color: #1e8095;
-    color: white;
     font-weight: 300;
     margin: 0px 13px 0px 13px;
     transition: .5s;
     transition-duration: .5s; 
 }
 
+/*Light / Dark Mode Image*/
+ .lightModeImg {
+    margin-left: 97%;
+    margin-top: -2.9%;
+    position: absolute;
+}
+#sun {
+    cursor: pointer;
+}
 
 /*CONTENT TEXT*/
 h1 {
@@ -215,8 +229,8 @@ b {
     width: 30%;
 }
 .ddBtn {
-    color: rgb(210, 220, 230);
-    background-color: #303030;
+    color: var(--dd-text);
+    background-color: var(--project-box);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -251,11 +265,11 @@ b {
 }
 .project-align > div {
     margin: 1.5rem; 
+    background-color: var(--project-box);
 }
 /*ROCK PAPER SCISSORS*/
 div #rps {
     text-align: center;
-    background-color: #f9f9f90e;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -296,7 +310,6 @@ div #rps img {
 /*TIC TAC TOE*/
 div #ttt {
     text-align: center;
-    background-color: #f9f9f90e;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -327,9 +340,10 @@ div #ttt {
 .square:hover {
     background-color: #d0cccc;
 } 
-#status {
-    margin-top: 10px;
+#gameStatus {
+    margin-top: 5px;
     font-size: 20px;
+    font-weight: 600;
 }
 
 

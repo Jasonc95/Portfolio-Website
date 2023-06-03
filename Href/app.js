@@ -84,3 +84,16 @@ ddBtn.forEach(button => {
     paragraph.classList.toggle('show');
   });
 });
+
+
+/*Light Mode*/
+const lightMode = document.getElementById('sun');
+
+lightMode.onclick = function(){
+  document.body.classList.toggle('lightDark');
+  if(document.body.classList.contains('lightDark')){
+    sun.src = "images/Moon.png";
+  }else{
+    sun.src = "images/Sun.png";
+  }
+}
