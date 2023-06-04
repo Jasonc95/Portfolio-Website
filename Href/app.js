@@ -92,8 +92,8 @@ const lightMode = document.getElementById('sun');
 lightMode.onclick = function(){
   document.body.classList.toggle('lightDark');
   if(document.body.classList.contains('lightDark')){
-    sun.src = "images/Moon.png";
+    sun.src = "Images/Moon.png";
   }else{
-    sun.src = "images/Sun.png";
+    sun.src = "Images/Sun.png";
   }
 }
